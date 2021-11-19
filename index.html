@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <title>Ansh Goyal</title>
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
     <nav class="navbar">
@@ -13,11 +18,17 @@
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class= "menu_btn">Home</a></li>
-                <li><a href="#ablue" class= "menu_btn">About</a></li>
+                <li><a href="#about" class= "menu_btn">About</a></li>
                 <li><a href="#skills" class= "menu_btn">Skills</a></li>
                 <li><a href="#projects" class= "menu_btn">Projects</a></li>
                 <li><a href="#contact" class= "menu_btn">Contact</a></li>
             </ul>
+
+            <div class="barsmenu" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
         </div>
     </nav>
 
@@ -27,11 +38,97 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Ansh Goyal</div>
-                <div class="text-3">And I'm a <span>Student</span></div>
+                <div class="text-3">And I'm a <span class="typing"></span></div>
                 <a href="#">Resume</a>
             </div>
         </div>
     </section>
+
+
+    <!-- About secition -->
+
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title" id= "about">About Me</h2>
+            <!-- <h3 class="subtitle">who i am</h3> -->
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/profile-1.jpeg" alt="">
+                </div>
+                <div class = "column right">
+                    <h1 class = "introduction">I'm Ansh Goyal and I'm a <span class="typing-2"></span></h1>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod accusantium ducimus voluptate corrupti quaerat dolor ipsa in at, eligendi officiis aperiam aliquid amet hic saepe soluta perferendis repudiandae suscipit enim, impedit, totam reiciendis ipsam?</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="black">
+        <div>
+            
+        </div>
+    </section>
+
+
+    <section class="contact-us" id= "contact">
+        <div class="max-width">
+            <h2 class="title">Contact</h2>
+            <!-- <h3 class="subtitle">s2</h3> -->
+            <div class="contact-content">
+                <div class="column left">
+                    <h2 class="introduction">Get in touch</h2>
+                    <p>The best way to get in touch with me is to email at <a href="mailto:anshg1214@gmail.com">anshg1214@gmail.com</a>.</p>
+                    <br>
+                    <p>You can also connect with on any of the following networks:</p>
+                    <div class="row" id= "github">
+                        <img src="images/github.svg" alt="" srcset="">
+                        <a>Github</a>
+                    </div>
+                    <div class="row" id= "linkedin">
+                        <img src="images/linkedin.svg" alt="" srcset="">
+                        <a>LinkedIn</a>
+                    </div>
+                    <div class="row" id= "twitter">
+                        <img src="images/twitter.svg" alt="">
+                        <a>Twitter</a>
+                    </div>
+                    
+
+                </div>
+                <div class="column right">
+                    <h2 class="introduction">Message Me</h2>
+                    <form>
+                        <input type="text" id="name" name="name" placeholder="Name" required="" >
+                        <input type="email" id="email" name="email" placeholder="Email" required="" >
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required="" >
+                        <!-- <input type="text" id="message" name="message" placeholder="Message" required="" > -->
+                        <textarea id= "message" cols="30" rows="10" placeholder="Message.." required=""></textarea>
+                        <button type="submit">Send</button>
+
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <span>Created By <a href="https://anshgoyal.tech">Ansh Goyal</a> | <span >@</span> 2021 All rights reserved.</span>
+    </footer>
+
+
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>
