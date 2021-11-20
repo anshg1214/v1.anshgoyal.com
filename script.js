@@ -25,6 +25,26 @@ $(document).ready(function(){
 
 
 
+    // const button = document.getElementById("submitButton");
+    // const disableButton = () => {
+    //     button.value = "Searching..."
+    //     button.disabled = true
+    // }
+      
+    // const enableButton = () => {
+    //     button.value = "Get recommendations"
+    //     button.disabled = false  
+    // }
+
+
+    // function buttontextchange(){
+    //     setTimeout(function(){ 
+    //         disableButton()
+    //     }, 5000);
+    //     enableButton();
+    //}
+
+
 
 
 });
