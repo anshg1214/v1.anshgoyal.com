@@ -8,7 +8,7 @@
     font-size: 10px;
 
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .contact-us, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -30,6 +30,8 @@ section{
 div {
     display: block;
 }
+
+
 /* title */
 
 
@@ -56,6 +58,7 @@ div {
 
 
 /* Navbar */
+
 
 .navbar{
     font-family: 'Ubuntu', sans-serif;
@@ -111,7 +114,7 @@ div {
     margin-left: 20px;
 }
 
-.navbar .max-width .menu .menu_btn{
+.navbar .max-width .menu li .menu_btn{
     display: block;
     color: white;
     margin-left: 25px;
@@ -137,8 +140,9 @@ div {
 
 /* MENU BUTTON */
 
+
 .barsmenu {
-    display: inline-block;
+    display: none;
     cursor: pointer;
 }
   
@@ -164,6 +168,7 @@ div {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
+
 /* Home */
 
 
@@ -186,20 +191,24 @@ div {
 .home .max-width .home-content .text-1{
     font-size: 27px;
 }
+
 .home .max-width .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
 }
+
 .home .max-width .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
 }
+
 .home .max-width .home-content .text-3 span{
     font-size: 40px;
     color: crimson;
     font-weight: 500;
 }
+
 .home .max-width .home-content a{
     display: inline-block;
     background-color: crimson;
@@ -213,30 +222,29 @@ div {
     margin-top: 20px;
     transition: all 0.3s ease;
 }
+
 .home .max-width .home-content a:hover{
     margin-top: 20px;
-
     background-color: transparent;
     color: white;
     border:2px solid crimson;
 }
 
 
-
-
-
 /* About Me */
+
 
 .about .max-width .about-content{
     width: 100%;
     display: flex;
     flex-direction: row;
-    font-family: 'poppins',sans-serif;
     align-items: center;
+
 }
 
 .about .max-width .about-content .left{
     width: 45%;
+    object-fit: cover;
 }
 
 .about .max-width .about-content .left img{
@@ -265,7 +273,7 @@ div {
 
 
 .about .max-width .about-content .right p{
-    font-size: 2rem;
+    font-size: 20px;
     text-align: justify;
     font-weight: 200;
     
@@ -287,16 +295,15 @@ div {
     width: 100%;
     display: flex;
     flex-direction: row;
-    font-family: 'poppins',sans-serif;
     align-items: flex-start;
 
 }
 
 .contact-us .max-width .contact-content .left{
-    width: 50%;
-    padding: 0 30px;
     display: flex;
     flex-direction: column;
+    width: 50%;
+    padding: 0 30px;
 }
 
 .contact-us .max-width .contact-content .left p{
@@ -344,6 +351,8 @@ div {
 .contact-us .max-width .contact-content .right{
     width: 50%;
     padding: 0 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-us .max-width .contact-content .introduction{
@@ -437,12 +446,185 @@ footer span a:hover{
 
 /* Media */
 
+@media (max-width:1125px){
+    .about .max-width .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
 
 @media(max-width: 950px){
     .max-width{
-        max-width: 1300px;
         padding: 0 50px;
-        margin: auto;
+        width: 100%;
     }
+
+    .barsmenu {
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+
+    .navbar .menu{
+        position: fixed;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .max-width .menu li{
+        margin-top: 30px;
+    }
+    .navbar .max-width .menu li .menu_btn{
+        margin: 20px;
+        font-size: 30px;
+    }
+    
+    .navbar .max-width .menu li .menu_btn:hover{
+        margin: 20px;
+        font-size: 30px;
+        color: crimson;
+    }
+    .navbar.sticky .max-width .menu .menu_btn:hover{
+        margin: 20px;
+        font-size: 30px;
+        color: crimson;
+    }
+
+    /* HOME */
+    .home .max-width .home-content .text-1{
+        font-size: 24px;
+    }
+    
+    .home .max-width .home-content .text-2{
+        font-size: 70px;
+    }
+    
+    .home .max-width .home-content .text-3{
+        font-size: 35px;
+    }
+    
+    .home .max-width .home-content .text-3 span{
+        font-size: 35px;
+    }
+
+    .home .max-width .home-content a{
+        font-size: 27px;
+    }
+
+    /* About */
+
+    .about .max-width .about-content{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 60px;
+        justify-content: center;
+    }
+
+    .about .max-width .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .max-width .about-content .right{
+        width: 100%;
+    }
+
+        
+    .contact-us .max-width .contact-content{
+        flex-direction: column;
+    }
+
+    .contact-us .max-width .contact-content .left{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-us .max-width .contact-content .right{
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 672px) {
+    .max-width{
+        padding: 0 30px;
+    }
+
+    .home .max-width .home-content .text-1{
+        font-size: 20px;
+    }
+    
+    .home .max-width .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .max-width .home-content .text-3{
+        font-size: 30px;
+    }
+    
+    .home .max-width .home-content .text-3 span{
+        font-size: 30px;
+    }
+
+    .home .max-width .home-content a{
+        font-size: 24px;
+    }
+    .about .max-width .about-content .right .introduction{
+        font-size: 24px;
+    }
+    .about .max-width .about-content .right h1 span{
+        font-size: 24px;
+    }
+    .about .max-width .about-content .right p{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .home .max-width .home-content .text-2{
+        font-size: 55px;
+    }
+    
+    .home .max-width .home-content .text-3{
+        font-size: 25px;
+    }
+    
+    .home .max-width .home-content .text-3 span{
+        font-size: 25px;
+    }
+
+    .home .max-width .home-content a{
+        font-size: 21px;
+    }
+
+    .about .max-width .about-content .right .introduction{
+        font-size: 19px;
+    }
+    .about .max-width .about-content .right h1 span{
+        font-size: 19px;
+    }
+    .about .max-width .about-content .right p{
+        font-size: 16px;
+    }
+
+    
+
 
 }

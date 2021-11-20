@@ -22,29 +22,24 @@ $(document).ready(function(){
         loop: true
     });
 
+    $(".barsmenu").click(function(){
+        $(".navbar .menu").toggleClass("active");
+    })
 
 
-
-    // const button = document.getElementById("submitButton");
-    // const disableButton = () => {
-    //     button.value = "Searching..."
-    //     button.disabled = true
-    // }
-      
-    // const enableButton = () => {
-    //     button.value = "Get recommendations"
-    //     button.disabled = false  
-    // }
-
-
-    // function buttontextchange(){
-    //     setTimeout(function(){ 
-    //         disableButton()
-    //     }, 5000);
-    //     enableButton();
-    //}
+    $('#sendmessage').submit(function (e){
+        e.preventDefault();
+        $("form").trigger("reset");
+        $("#submitButton").text(function(i, origText){
+            return " Message Sent";
+          });
+        
+        setTimeout(function(){
+            $("#submitButton").text(function(i, origText){
+                return "Send";
+              });}, 3000
+        );
 
 
-
-
+    });
 });
