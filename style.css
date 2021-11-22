@@ -614,6 +614,11 @@ footer span a:hover{
         font-size: 21px;
     }
 
+    .about .max-width .about-content .left img{
+        height: 300px;
+        width: 300px;
+    }
+
     .about .max-width .about-content .right .introduction{
         font-size: 19px;
     }
