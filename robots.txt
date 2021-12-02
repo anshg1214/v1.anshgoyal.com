@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://anshgoyal.tech/sitemap.xml
+Allow: /
+
+Sitemap: https://anshgoyal.com/sitemap.xml
